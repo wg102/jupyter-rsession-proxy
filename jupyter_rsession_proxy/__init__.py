@@ -33,7 +33,8 @@ def setup_rserver():
         return [
             get_rstudio_executable('rserver'),
             '--www-port=' + str(port),
-            '--www-frame-origin=same'
+            '--www-frame-origin=same',
+            '--www-root-path=/rstudio'
         ]
 
     return {
