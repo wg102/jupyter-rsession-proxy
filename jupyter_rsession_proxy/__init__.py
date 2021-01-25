@@ -42,7 +42,6 @@ def setup_rserver():
         ]
             '--www-frame-origin=same',
             '--auth-none=1',
-            '--allow-file-uploads=0',
             '--server-user=' + getpass.getuser()
         ] + www_path
 
@@ -83,7 +82,8 @@ def setup_rsession():
             '--log-stderr=1',
             '--session-timeout-minutes=0',
             '--user-identity=' + getpass.getuser(),
-            '--www-port=' + str(port)
+            '--www-port=' + str(port),
+            '--allow-file-uploads=0'
         ]
 
     return {
