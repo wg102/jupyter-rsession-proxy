@@ -42,6 +42,7 @@ def setup_rserver():
         ]
             '--www-frame-origin=same',
             '--auth-none=1',
+            '--allow-file-uploads=0',
             '--server-user=' + getpass.getuser()
         ] + www_path
 
