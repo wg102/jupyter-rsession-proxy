@@ -39,7 +39,6 @@ def setup_rserver():
             get_rstudio_executable('rserver'),
             '--www-port=' + str(port),
             '--www-frame-origin=same',
-            '--auth-none=1',
             '--server-user=' + getpass.getuser()
         ] + www_path
 
@@ -78,7 +77,6 @@ def setup_rsession():
             '--standalone=1',
             '--program-mode=server',
             '--log-stderr=1',
-            '--session-timeout-minutes=0',
             '--user-identity=' + getpass.getuser(),
             '--www-port=' + str(port),
             '--allow-file-uploads=0'
