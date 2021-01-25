@@ -38,8 +38,6 @@ def setup_rserver():
         return [
             get_rstudio_executable('rserver'),
             '--www-port=' + str(port),
-            '--www-frame-origin=same'
-        ]
             '--www-frame-origin=same',
             '--auth-none=1',
             '--server-user=' + getpass.getuser()
